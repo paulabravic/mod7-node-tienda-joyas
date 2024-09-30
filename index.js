@@ -22,8 +22,8 @@ app.get("/", async (req,res) => {
 app.get('/joyas', async (req, res) => {
   try {
     console.log(`req.query: ${req.query}`)
-    let medicamentos = await obtenerJoyas(req.query);
-    res.json(medicamentos);
+    let joyas = await obtenerJoyas(req.query);
+    res.json(joyas);
   } catch (error) {
     res.status(500).json("Un error ha ocurrido: " + error);
   }
@@ -32,8 +32,8 @@ app.get('/joyas', async (req, res) => {
 app.get('/joyas/filtros', async (req, res) => {
   try {
     console.log(`req.query: ${req.query}`)
-    let medicamentos = await obtenerJoyasFiltro(req.query);
-    res.json(medicamentos);
+    let joyas = await obtenerJoyasFiltro(req.query);
+    res.json(joyas);
   } catch (error) {
     res.status(500).json("Un error ha ocurrido: " + error);
   }
